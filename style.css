@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================== VARIABLES ================== */
+:root {
+    /* COLORS */
+    --primary-color: hsl(14, 45%, 36%);
+    --secondary-color: hsl(332, 51%, 32%);
+    --white-color: hsl(0, 0%, 100%);
+    --rose-white-color: hsl(330, 100%, 98%);
+    --eggshell-color: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+
+    /* FONTS */
+    --title-font: Young Serif, sans-serif;
+    --body-font: Outfit, sans-serif;
+}
+
+/* ================== GLOBAL CONFIGURATIONS ================== */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+    gap: 24px;
+}
+
+.title {
+    font-family: var(--title-font);
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+
+.list {
+    list-style-position: inside;
+    list-style-type: style color var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    color: var(--wenge-brown);
+    font-family: var(--body-font);
+    font-size: 16px;
+}
+
+.list-element span {
+    margin-left: 20px;
+}
+
+.list li::marker {
+    color: var(--primary-color);
+    font-size: 10px;
+}
+
+.title-list-bold {
+    font-weight: 700;
+}
+
+
+/* ================== LAYOUT ================== */
+.container .image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.title-home {
+    font-family: var(--title-font);
+    font-size: 36px;
+    color: var(--dark-charcoal);
+}
+
+.paragraph {
+    font-family: var(--body-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--wenge-brown);
+}
+
+#preparation {
+    padding: 24px 56px;
+}
+
+#preparation .list li::marker {
+    color: var(--secondary-color);
+}
+
+.title-preparation {
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-family: var(--body-font);
+}
+
+hr {
+    border: 1px solid var(--light-grey);
+}
+
+.list-number {
+    list-style-type: decimal;
+}
+
+.list-number li::marker {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.table-nutrition {
+    font-family: var(--body-font);
+    font-size: 16px;
+    color: var(--wenge-brown);
+    border-collapse: collapse;
+}
+
+.table-nutrition td {
+    border-bottom: 1px solid var(--light-grey);
+    padding: 15px 0;
+}
+
+table tr td.nutritional-values {
+    padding-left: 32px;
+}
+
+.values {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+table tr td.final-item {
+    border: none;
+}
+
+/* ================== DESKTOP 1024px ================== */
+@media (min-width: 1024px) {
+    body {
+        background-color: var(--eggshell-color);
+    }
+
+    .container {
+        background-color: var(--white-color);
+        width: 736px;
+        margin: 123px auto;
+        padding: 40px;
+        border-radius: 24px;
+    }
+
+    .section {
+        padding: 0;
+    }
+
+    .container .image {
+        border-radius: 12px;
+    }
+
+    #preparation {
+        padding: 28px;
+    }
+
+
+}
